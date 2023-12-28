@@ -1,6 +1,6 @@
-# Sablier Documentation
+# Poolshark Documentation
 
-This website contains all documentation for Sablier, including older protocol releases. It is built using
+This website contains all documentation for Poolshark, including smart contract guides, branding, etc. It is built using
 [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
 
 ## Installation
