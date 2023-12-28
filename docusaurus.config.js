@@ -4,17 +4,17 @@ const katex = require("rehype-katex");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   baseUrl: "/",
-  favicon: "img/favicon.ico",
+  favicon: "img/logo.png",
   markdown: {
     mermaid: true,
   },
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
-  organizationName: "sablier-labs",
-  projectName: "sablier-docs",
-  tagline: "Documentation and guides for Sablier",
-  title: "Sablier Docs",
-  url: "https://docs.sablier.com",
+  organizationName: "poolshark-labs",
+  projectName: "poolshark-docs",
+  tagline: "Documentation and guides for Poolshark",
+  title: "Poolshark Docs",
+  url: "https://docs.poolshark.fi",
   presets: [
     [
       "classic",
@@ -129,7 +129,7 @@ const config = {
             items: [
               {
                 label: "Twitter",
-                href: "https://twitter.com/Sablier",
+                href: "https://twitter.com/PoolsharkLabs",
               },
               {
                 label: "Discord",
@@ -137,7 +137,7 @@ const config = {
               },
               {
                 label: "Blog",
-                href: "https://medium.com/sablier",
+                href: "https://mirror.xyz/pshark.eth",
               },
               {
                 label: "Branding",
@@ -177,7 +177,7 @@ const config = {
         {
           name: "keywords",
           content:
-            "blockchain, DAO, decentralized finance, defi, docs, Ethereum, foundry, money streaming, NFT, open source, payments, payroll, Sablier, Safe, smart contracts, solidity, token distribution, token streaming, vesting, web3",
+            "blockchain, DAO, decentralized finance, defi, docs, Ethereum, foundry, money streaming, NFT, open source, payments, payroll, Poolshark, Safe, smart contracts, solidity, token distribution, token streaming, vesting, web3",
         },
       ],
       navbar: {
@@ -215,16 +215,16 @@ const config = {
           {
             label: "Links",
             position: "right",
-            to: "https://linktr.ee/SablierLabs",
+            to: "https://linktr.ee/PoolsharkLabs",
           },
         ],
         logo: {
-          alt: "Sablier Hourglass",
-          height: "20",
-          src: "img/icon.svg",
-          width: "20",
+          alt: "Poolshark Logo",
+          height: "22",
+          src: "img/logo.png",
+          width: "31",
         },
-        title: "Sablier Docs",
+        title: "Poolshark Docs",
       },
       prism: {
         additionalLanguages: ["solidity"],

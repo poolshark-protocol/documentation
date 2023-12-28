@@ -1,10 +1,9 @@
 export const links = {
-  app: "https://app.sablier.com",
-  discord: "https://discord.gg/bSwRCwWRsT",
-  example: "https://app.sablier.com/stream/LL-50-40",
+  app: "https://app.poolshark.fi",
+  discord: "https://discord.gg/poolshark-896196350310514739",
   forms: {
-    integrations: "https://forms.gle/KKDo1aMGp2b2tdEr5",
+    integrations: "https://forms.gle/yHvJCCjC96ExwgXX7",
   },
-  github: "https://github.com/sablier-labs",
-  medium: "https://medium.com/sablier",
+  github: "https://github.com/poolshark-protocol",
+  medium: "https://mirror.xyz/pshark.eth",
 };

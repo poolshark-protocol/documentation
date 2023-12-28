@@ -93,23 +93,23 @@ export default function Header() {
       <Underlay />
       <Content>
         <Title>
-          <h1>Sablier Docs</h1>
+          <h1>Poolshark Docs</h1>
         </Title>
         <Subtitle>
-          <p>Documentation for the Sablier token distribution protocol</p>
+          <p>Documentation for the Poolshark decentralized trading protocol</p>
         </Subtitle>
         <Collection>
           <Feature
             description={"High level concepts and protocol definitions"}
             Icon={LightBulbIcon}
             title={"Concepts"}
-            to={"/concepts/what-is-sablier"}
+            to={"/concepts/what-is-poolshark"}
           />
           <Feature
             description={"Deployment addresses, setup guides, and technical reference"}
             Icon={DocumentTextIcon}
             title={"Contracts"}
-            to={"/contracts/v2/overview"}
+            to={"/contracts/overview"}
           />
 
           <Feature

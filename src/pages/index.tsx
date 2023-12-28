@@ -33,7 +33,7 @@ const Divider = styled.div`
 
 export default function Home() {
   return (
-    <Layout description="Documentation and guides for Sablier">
+    <Layout description="Documentation and guides for Poolshark">
       <Wrapper>
         <Header />
         <Divider />
