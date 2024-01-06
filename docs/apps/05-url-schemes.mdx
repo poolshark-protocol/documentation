@@ -24,7 +24,7 @@ Every stream created through the Sablier Protocol is identified through three pa
 #### Contract Aliases
 
 Sablier V2 supports multiple versions and variants of streaming contracts, e.g. `SablierV2LockupLinear` and
-`SablierV2LockupDynamic`. Specifically, their [`core-1.0.0`](/contracts/v2/deployments). To provide a simple visual
+`SablierV2LockupDynamic`. Specifically, their [`core-1.0.0`](/contracts/limit/deployments). To provide a simple visual
 structure, while also accounting for future stream types (backwards compatibility), we use the following abbreviations
 as aliases:
 
@@ -65,7 +65,7 @@ Here's a list of all supported values (to be appended to the create form link):
 | Parameter  | Type    | Description                                                                                                   | Example                                                                                        |
 | :--------- | :------ | :------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
 | shape      | String  | Type of payment                                                                                               | `linear`, `cliff`, `dynamicExponential`, `dynamicExponentialCliff`, `dynamicStepper`           |
-| chainId    | Number  | Defaults to the connected chain                                                                               | `1`, `10`, `42161` or any other supported [chain](/contracts/v2/deployments)                   |
+| chainId    | Number  | Defaults to the connected chain                                                                               | `1`, `10`, `42161` or any other supported [chain](/contracts/limit/deployments)                   |
 | token      | String  | Address of the asset                                                                                          | `0x6b17...1d0f` ([DAI](https://etherscan.io/token/0x6b175474e89094c44da98b954eedeac495271d0f)) |
 | cancelable | Boolean | If a stream is cancelable or not, defaults to `true`                                                          | `true`, `false`                                                                                |
 | recipient  | String  | Recipient's address or ENS                                                                                    | `0x12...AB`, `vitalik.eth`                                                                     |
@@ -120,7 +120,7 @@ want to use this feature, here is a table with all the available parameters:
 | Parameter | Type         | Description                                                                | Values                                                                       |
 | :-------- | :----------- | :------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
 | t         | String       | The active tab in the dashboard. For global queries, use `search`.         | `search`, `sender`, or `recipient`                                           |
-| c         | Number       | The chain of the streams in the search result. This parameter is required. | `1`, `10`, `42161` or any other supported [chain](/contracts/v2/deployments) |
+| c         | Number       | The chain of the streams in the search result. This parameter is required. | `1`, `10`, `42161` or any other supported [chain](/contracts/limit/deployments) |
 | s         | String       | The address of the stream sender by which to filter                        | `0x12...AB`, `vitalik.eth`                                                   |
 | r         | String       | The address of the stream recipient by which to filter                     | `0x12...AB`, `vitalik.eth`                                                   |
 | i         | String array | An array of stream identifiers to look up                                  | `LL-5-1`, `LD-5-14` etc.                                                     |

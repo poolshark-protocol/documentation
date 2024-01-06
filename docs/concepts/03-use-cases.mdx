@@ -6,111 +6,47 @@ title: "Use Cases"
 
 import { links } from "@site/src/constants";
 
-While Sablier is a general-purpose protocol that can be used for a
-[wide variety](https://twitter.com/Sablier/status/1205533344886411264) of applications, some use cases are more popular
-than others. In this article, we will cover the three primary reasons people are using Sablier at the moment: vesting,
-payroll, and airdrops.
+While Poolshark is a general-purpose AMM that can be used for a
+wide variety of applications, some use cases are more popular
+than others.
 
-## Vesting
+In this article, we will cover two reasons users choose Poolshark at the moment: swing trading and programmatic sales. 
 
-### 1. Efficiency
+## Limit
 
-Traditional vesting schemes require a lot of manual input. Payments must be processed manually over an extended period,
-demanding continuous dedication from the treasury management team. The treasury admin has to initiate numerous
-transactions each month to compensate contributors and oversee the vesting of employees and investors
-
-As a result, traditional vesting proves to be labor-intensive, prone to errors, and ultimately delivers a subpar user
-experience for everyone involved. Organizations need to devote considerable time to administer funds, while recipients
-wait months, quarters, or sometimes even longer to obtain their compensation.
-
-Sablier solves these problems by automating the entire vesting process.
-
-The initial setup involves creating the streams, which only needs to be done once. You simply specify the total duration
-of the stream (e.g., two years), and that's all - no further actions are required from you. With Sablier, vesting is a
-"set it and forget it" process.
-
-Then, recipients receive their compensation gradually over time: with every second that passes, they receive a fraction
-of their allocated compensation. This model aligns with the incentives of both parties. The organization only needs to
-spend time once, to create the streams, while recipients receive the funds gradually over time, allowing them to manage
-their finances as they wish.
-
-### 2. Schelling points
+### 1. Swing Trading
 
 :::tip
 
-In game theory, a "focal point" (also called Schelling point) is a solution that people tend to choose by default in the
-absence of communication.
+Limit LPs can be utilitzed to buy or sell an asset in a favorable price range.
 
 :::
 
-Since traditional vesting contracts have a predictable release schedule, the day on which a vesting period unlocks may
-be used as a Schelling point for speculation. As a result, some token holders may dump their tokens as soon as they
-receive them.
+Swing trading is a style of trading that aims to exploit short- to medium-term price movements in an asset using favorable risk/reward metrics. Swing traders primarily rely on technical analysis to determine suitable entry and exit points, but they may also use fundamental analysis as an added filter 1.
 
-By contrast, Sablier streams distribute a fraction of the total payment every second to recipients, enabling them to
-withdraw a portion of funds at any time. This effectively addresses the problem of coordinated dumping.
+This strategy involves holding a position either long or short for more than one trading session, but usually not longer than several weeks or a couple of months. The goal of swing trading is to capture a chunk of a potential price move. Successful swing traders are only looking to capture a chunk of the expected price move, and then move on to the next opportunity.
 
-### 3. Transparency
+Poolshark Limit LPs allow traders to lock in their trades to the nearest price tick, decreasing time spent on position management.
 
-It's hard to aggregate discrete payments, which is why they typically lack transparency. Just by looking at a
-transaction on Etherscan, it's difficult to pin down to whom it was made, or for what purpose. This issue is
-particularly relevant to DAOs, where transparency is critical to enabling contributors to understand how the treasury
-funds are allocated and for what purposes.
+### 2. Programmatic Sale
 
-With Sablier streams, the issues mentioned above are avoided. Anyone can use the Sablier Interface to monitor all
-streams created by a particular address, as well as all transactions associated with each stream.
+Programmatic sales are available through Poolshark Limit by creating a pool along with a Limit LP.
 
-To illustrate this, here's an example of a stream as viewed on the Sablier Interface.
+In a programmatic sale, an Automated Market Making (AMM) curve is used to distribute the sale over a price range on an x*y=k curve. This means that the price of the token increases as the quantity sold increases, creating a dynamic pricing system that adjusts according to supply and demand.
 
-## Payroll
+This method allows for efficient distribution of tokens and helps to avoid price spikes that can occur with traditional sales methods. It also ensures that all participants have an equal opportunity to purchase tokens.
 
-We have also seen Sablier being used for payroll. Streaming salaries through Sablier can significantly enhance employee
-satisfaction and retention.
+On the other hand, a Dutch auction is a type of sale where the price of the token begins at a certain level and gradually decreases over time. This method is designed to ensure that the token is sold at a fair price, taking into account the perceived value of the token by the participants.
 
-The benefits outlined in the "Efficiency" section earlier apply equally to this use case, since traditional payroll
-solutions, like vesting schemes, can be both labor-intensive and prone to errors.
+The price decrease is gradual, allowing participants to bid at different price levels and potentially receive a token at a price they consider fair. However, this method could lead to price instability and potential price drops, as the price of the token is not directly linked to its actual worth.
 
-## Airdrops
+In conclusion, Programmatic sales and Dutch auctions provide different strategies for selling fungible tokens.
 
-This section explores why streaming provides a superior method of distributing tokens compared to simple airdrops.
+The choice between the two depends on the specific goals of the token sale, such as:
+* the desired price stability
+* the distribution of tokens among participants
+* the overall market conditions
 
-### 1. Flaws in simple airdrops
+Poolshark Limit is recommended for use as a programmatic sale to ensure exact pricing for all parties.
 
-[Retroactive airdrops](https://members.delphidigital.io/learn/retroactive-airdrops) have become a common practice in the
-cryptocurrency industry. They are often used to launch new tokens, and for good reason: it allows for the distribution
-of project ownership to the right people.
 
-However, the traditional way of running airdrops is flawed, because the majority of recipients typically sell their
-tokens immediately after claiming them. As a result, the interest gathered by these airdrops is short-lived.
-
-Simple airdrops fail to incentivize community members to think long-term. Recipients receive all of their tokens at
-once, rather than over time. This is problematic, because community members are the backbone of a crypto project, and
-losing their support immediately after the airdrop is not ideal.
-
-Fortunately, there is an elegant solution that encourages long-term thinking among community members. By streaming your
-airdrop with Sablier, you can ensure that community members prioritize the project's future. This approach creates the
-right incentives for members to think about the project's long-term success.
-
-### 2. Streaming airdrops
-
-Instead of airdropping the entirety of the token allocation all at once, airdrop recipients receive a fraction of the
-tokens every second through a Sablier stream.
-
-A stream can have any duration you want. You can choose to vest your new token over a period of 6 months, 2 years, or
-any other duration you prefer. This way, airdrop recipients are forced to think about the project's long-term
-development and stay engaged with it.
-
-1. The token price may fluctuate over time, which motivates recipients to do whatever they can to increase the price.
-2. In cases where a recipient fails to remain involved with the project, the creator of the airdrop has the ability to
-   cancel the recipient's stream. Canceling a stream will not undo any tokens that have already been streamed, but it
-   will prevent the recipient from receiving any more tokens.
-
-### 3. Price crashes
-
-Streaming not only creates the right incentives for airdrops, but also ensures that the price of the token won't crash
-on day one. This has been the case for many airdrops, where a large percentage of recipients dumped immediately after
-claiming their tokens.
-
-If you are interested in airdropping your token, check out the <a href={links.app}>Sablier Interface</a>, where you can
-create multiple streams in a single transaction. Or, if you prefer to create the streams programmatically, check out the
-docs on the [V2 Protocol](/contracts/v2/overview).

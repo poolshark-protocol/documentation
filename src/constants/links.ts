@@ -5,5 +5,5 @@ export const links = {
     integrations: "https://forms.gle/yHvJCCjC96ExwgXX7",
   },
   github: "https://github.com/poolshark-protocol",
-  medium: "https://mirror.xyz/pshark.eth",
+  mirror: "https://mirror.xyz/pshark.eth",
 };

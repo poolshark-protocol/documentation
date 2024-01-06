@@ -92,7 +92,7 @@ function Socials() {
           <img src="img/social/discord.svg" style={{ width: "48px", height: "48px" }} />
           <div>
             <h4>Discord</h4>
-            <p>Hop in to the #dev channel to get help.</p>
+            <p>Hop in the #user-support channel to get help.</p>
           </div>
         </Social>
 
@@ -102,17 +102,17 @@ function Socials() {
           </StyledGitHubIcon>
           <div>
             <h4>GitHub</h4>
-            <p>View all Sablier code repositories.</p>
+            <p>View the Poolshark code repositories.</p>
           </div>
         </Social>
 
-        <Social href={links.medium}>
+        <Social href={links.mirror}>
           <StyledMediumIcon>
             <MediumIcon size={48} />{" "}
           </StyledMediumIcon>
           <div>
-            <h4>Medium</h4>
-            <p>Follow the announcements on our blog.</p>
+            <h4>Blog</h4>
+            <p>Follow all announcements on our blog.</p>
           </div>
         </Social>
       </List>

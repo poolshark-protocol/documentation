@@ -1,0 +1,55 @@
+---
+id: "Cover"
+sidebar_position: 1
+title: "Cover"
+---
+
+Cover Pools
+
+Cover Pools allows users to create a position to increase exposure to a specific token on a conditional price for a token pair. 
+If the ETH price increases, the pool sells DAI and increases the ETH exposure
+If the ETH price decreases, the pool sells ETH and increases the DAI exposure
+
+graphic 
+
+In contrast, if the position had been in a bidirectional AMM, it would increase the exposure of the token dropping in price in comparison to the opposing token 
+
+If the market wants ETH, the pool takes DAI and raises the ETH to DAI price
+If the market wants DAI, the pool takes ETH and decreases the ETH to DAI price.
+
+graphic 2
+
+This creates a hedging tool for the user if they want to enter or exit an ERC-20 token over some range. 
+
+In this instance (figure 2), using a position with a fixed price, such as a limit order (as done when providing liquidity traditionally), will either underprice the assets or not be filled. 
+
+Cover Pools allows users to create a position that provides liquidity at a set price when the Time-Weighted Average Price (TWAP) nears the liquidity. The position becomes tradable; the liquidity participates in a Dutch auction. 
+
+Cover Pools operate with a Gradual Duction Auction (GDA), meaning that users can start at a price indicated by the current price tick of the position and then begin to offer a more discounted price until the market accepts it.
+
+As a Range Order, Cover Positions will periodically unlock liquidity across a price range as the TWAP increases or decreases (controlled by the user). 
+
+Due to arbitrage, high-frequency market volatility will be closed out exceptionally quickly. Range Orders protect users by preventing the unlocking of liquidity within this pool during volatile times.
+How Auctions Work
+
+When users deposit their liquidity to compete with the current market rate, the pool must have a dynamic pricing mechanism to fill the position as soon as possible while keeping any discount at a minimum. Cover Pools leverage Gradual Dutch Auctions to raise or lower the pool price (dependent on the buying or selling of a token) to satisfy market demand for an asset within a trading pair at that point in time. 
+
+From Paradigm's Gradual Dutch Auction article:
+```
+Here, the price for every auction decays exponentially according to some `decay constant`.
+The starting price of each auction increases by some fixed `scale factor`.
+And the starting price of the first auction is given by some `initial price`.
+```
+
+/ GDA Poolshark batches released based on TWAP 
+Combining these values (decay constant, scale factor, and initial price) facilitates an exponentially changing market price for each tick of liquidity the protocol auctions off. The price will always deviate by one price tick (e.g., 0.1% for the ETH-USDC 0.05% tier). 
+
+How Volatility Tiers Work
+
+Volatility tiers set a few parameters when a pool is initialized: the auction length, syncing fee, minimum position size, and minimum position width.
+
+Auction length: the amount of blocks until the next auction can be triggered by a price change 
+Syncing fee: when an auction goes unfilled, and it needs to be moved to the next price tick in which liquidity is added to the auction at the new price tick 
+Minimum position size: the smallest amount of liquidity required at a price tick to commence an auction 
+Minimum position size: the minimum amount of price ticks a position can span 
+

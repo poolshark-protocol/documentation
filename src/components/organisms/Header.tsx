@@ -109,21 +109,26 @@ export default function Header() {
             description={"Deployment addresses, setup guides, and technical reference"}
             Icon={DocumentTextIcon}
             title={"Contracts"}
-            to={"/contracts/overview"}
+            to={"/contracts/limit/overview"}
           />
-
           <Feature
+            description={"Token economy, distribution, and rewards system"}
+            Icon={CubeIcon}
+            title={"Token"}
+            to={"/token/tokenomics"}
+          />
+          {/* <Feature
             description={"Official interfaces and brand guidelines"}
             Icon={ComputerDesktopIcon}
             title={"Apps"}
             to={"/apps/overview"}
-          />
-          <Feature
+          /> */}
+          {/* <Feature
             description={"Off-chain utilities such as the subgraph"}
-            Icon={CubeIcon}
+            Icon={ComputerDesktopIcon}
             title={"APIs"}
             to={"/api/subgraphs/overview"}
-          />
+          /> */}
         </Collection>
       </Content>
     </Wrapper>

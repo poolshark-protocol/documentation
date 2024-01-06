@@ -14,9 +14,9 @@ set -euo pipefail
 # ---------------------------------------------------------------------------- #
 
 # Define the reference directories
-all=docs/contracts/v2/reference
-core=docs/contracts/v2/reference/core
-periphery=docs/contracts/v2/reference/periphery
+all=docs/contracts/limit/reference
+core=docs/contracts/limit/reference/core
+periphery=docs/contracts/limit/reference/periphery
 
 # Delete the current reference documentations
 find $core -type f -name "*.md" -delete
@@ -40,7 +40,7 @@ run() {
   cd ../../
 
   # Define the reference directory
-  reference=docs/contracts/v2/reference/$repo
+  reference=docs/contracts/limit/reference/$repo
 
   # Delete the current V2 reference
   find $reference -type f -name "*.md" -delete

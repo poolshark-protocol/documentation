@@ -21,7 +21,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       {
         docs: {
-          editUrl: "https://github.com/sablier-labs/v2-docs/tree/main/",
+          editUrl: "https://github.com/poolshark-protocol/documentation/tree/main/",
           rehypePlugins: [katex],
           routeBasePath: "/", // Serve the docs at the site's root
           remarkPlugins: [math],
@@ -41,7 +41,7 @@ const config = {
         redirects: [
           {
             from: "/protocol/faq/basics",
-            to: "/concepts/what-is-sablier",
+            to: "/concepts/what-is-poolshark",
           },
           {
             from: "/protocol/guides/getting-started",
@@ -53,7 +53,7 @@ const config = {
           },
           {
             from: "/protocol/introduction",
-            to: "/concepts/what-is-sablier",
+            to: "/concepts/what-is-poolshark",
           },
           {
             from: "/protocol/subgraphs/endpoints",
@@ -103,27 +103,27 @@ const config = {
       },
       footer: {
         links: [
-          {
-            title: "Company",
-            items: [
-              {
-                label: "About",
-                href: "https://sablierlabs.co.uk",
-              },
-              {
-                label: "Risk Notice",
-                href: "https://sablier.com/risk-notice",
-              },
-              {
-                label: "Terms of Service",
-                href: "https://sablier.com/terms-of-service",
-              },
-              {
-                label: "Privacy Policy",
-                href: "https://docs.google.com/document/d/10OgbKJkoLnZ_pJtF6SAfcP7ufOC18K3N39MH538XeiI",
-              },
-            ],
-          },
+          // {
+          //   title: "Company",
+          //   items: [
+          //     {
+          //       label: "About",
+          //       href: "https://sablierlabs.co.uk",
+          //     },
+          //     {
+          //       label: "Risk Notice",
+          //       href: "https://sablier.com/risk-notice",
+          //     },
+          //     {
+          //       label: "Terms of Service",
+          //       href: "https://sablier.com/terms-of-service",
+          //     },
+          //     {
+          //       label: "Privacy Policy",
+          //       href: "https://docs.google.com/document/d/10OgbKJkoLnZ_pJtF6SAfcP7ufOC18K3N39MH538XeiI",
+          //     },
+          //   ],
+          // },
           {
             title: "Community",
             items: [
@@ -133,7 +133,7 @@ const config = {
               },
               {
                 label: "Discord",
-                href: "https://discord.gg/bSwRCwWRsT",
+                href: "https://discord.gg/poolshark-896196350310514739",
               },
               {
                 label: "Blog",
@@ -141,7 +141,7 @@ const config = {
               },
               {
                 label: "Branding",
-                href: "https://github.com/sablier-labs/branding",
+                href: "https://www.figma.com/file/m5ztM0gd1psACKNrMB6ck1/PoolShark?type=design&node-id=22-818&mode=design",
               },
             ],
           },
@@ -149,20 +149,20 @@ const config = {
             title: "Developers",
             items: [
               {
-                label: "V2 Core",
-                href: "https://github.com/sablier-labs/v2-core",
+                label: "Limit Pools",
+                href: "https://github.com/poolshark-protocol/limit/tree/arb-mainnet",
               },
               {
-                label: "V2 Periphery",
-                href: "https://github.com/sablier-labs/v2-periphery",
+                label: "Cover Pools",
+                href: "https://github.com/poolshark-protocol/cover",
               },
-              {
-                label: "V2 Integration Template",
-                href: "https://github.com/sablier-labs/sablier-v2-integration-template",
-              },
+              // {
+              //   label: "V2 Integration Template",
+              //   href: "https://github.com/sablier-labs/sablier-v2-integration-template",
+              // },
               {
                 label: "Subgraph",
-                href: "https://github.com/sablier-labs/subgraph",
+                href: "https://github.com/poolshark-protocol/limit/tree/arb-mainnet/subgraph",
               },
             ],
           },
@@ -185,27 +185,32 @@ const config = {
           {
             label: "Concepts",
             position: "left",
-            to: "/concepts/what-is-sablier",
+            to: "/concepts/what-is-poolshark",
           },
           {
             label: "Contracts",
             position: "left",
-            to: "/contracts/v2/overview",
+            to: "/contracts/limit/overview",
           },
           {
-            label: "Apps",
+            label: "Token",
             position: "left",
-            to: "/apps/overview",
+            to: "/token/tokenomics",
           },
-          {
-            label: "APIs",
-            position: "left",
-            to: "/api/subgraphs/overview",
-          },
+          // {
+          //   label: "Apps",
+          //   position: "left",
+          //   to: "/apps/overview",
+          // },
+          // {
+          //   label: "APIs",
+          //   position: "left",
+          //   to: "/api/subgraphs/overview",
+          // },
           {
             label: "Discord",
             position: "right",
-            to: "http://discord.sablier.com",
+            to: "http://discord.poolshark.fi",
           },
           {
             label: "GitHub",
@@ -215,7 +220,7 @@ const config = {
           {
             label: "Links",
             position: "right",
-            to: "https://linktr.ee/PoolsharkLabs",
+            to: "https://link3.to/poolshark",
           },
         ],
         logo: {

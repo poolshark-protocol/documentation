@@ -1,8 +1,4 @@
-[submodule "repos/v2-core"]
+[submodule "repos/limit"]
   branch = "release"
-  path = "repos/v2-core"
-  url = "https://github.com/sablier-labs/v2-core"
-[submodule "repos/v2-periphery"]
-  branch = "release"
-  path = "repos/v2-periphery"
-  url = "https://github.com/sablier-labs/v2-periphery"
+  path = "repos/limit"
+  url = "https://github.com/poolshark-protocol/limit"
