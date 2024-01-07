@@ -4,10 +4,12 @@ sidebar_position: 4
 title: "Options Liquidity Mining"
 ---
 
-Poolshark decided to go with Call Options instead of traditional liquidity mining, due to certain challenges associated with modern yield farming. Token have the potential to decrease the value of tokens, attract users who are not committed, and incentivize undesirable behavior. On the other hand, Call Options offer several benefits, such as increased protocol loyalty, reduced sell pressure, establishment of a natural price floor, and integration with POL.
+Poolshark has implemented Options Liquidity Mining in order to generate revenue when Liquidity Miners attempt to exit through `FIN`.
+
+In Standard Liquidity Mining, Liquidity Miners have immediate access to liquidity, incentivizing a cascading effect of decreased liquidity when all users attempt to exit the system. On the other hand, Call Options offer several benefits, such as increased protocol loyalty, reduced sell pressure, establishment of a natural price floor, and integration with POL.
 
 Instead of receiving the FIN token for liquidity, participants in the protocol are given oFIN. This is a call option token that provides the protocol with the ability to amass a large cash reserve regardless of market conditions. Additionally, loyal users of Poolshark can purchase FIN at a discounted price using oFIN.
 
 - **Reallocation of cash**: By replacing FIN with oFIN as the reward token, the protocol is able to benefit from cash gains that would have otherwise gone to the farmers. This change does not affect the LPs for the token.
 - **Trading off incentivization efficiency for protocol cashflow**: For instance, Alice gets a 10% discount when using oFIN token, which means she could get 1 FIN token for $9. Traditional liquidity mining gives tokens for free, but it doesn't generate cash flow for the protocol. The higher the discount, the more efficient incentivization, but less cash for the protocol.
-- E**ffectively a continuous token sale**: Poolshark's Options Liquidity Mining program is unique as it operates as a continuous token sale at the market price, rather than giving away tokens for free. This approach allows the protocol to generate cash flow in comparison to a one-time token sale, this will make the protocol sustainable.
+- **Effectively a continuous token sale**: Poolshark's Options Liquidity Mining program is unique as it operates as a continuous token sale at the market price, rather than giving away tokens for free. This approach allows the protocol to generate cash flow in comparison to a one-time token sale, this will make the protocol sustainable.

@@ -1,0 +1,73 @@
+---
+id: "token-utility"
+sidebar_position: 3
+title: "Token Utility"
+---
+
+# Token Features
+
+## FIN Token
+
+The governance token of Poolshark is `FIN`. Users can stake their `FIN` tokens for serving dual roles in governance and utility. The `FIN` token is designed to empower users with decision-making capabilities and provide them with multifaceted benefits tied to the platform's performance. Shareholders will get a share of protocol revenue, `FIN` emissions, and governance over the platform. 
+
+Users will need to stake the `FIN` token, and it will be returned a liquid version of `FIN`, called`sFIN` which will represent their share of the staking. 
+
+## sFIN
+
+sFIN is the receipt token for FIN users, which represents the share within the Poolshark Protocol. These users will then get rewarded 100% of the trading fees on all pairs, and they will be rewarded with FIN tokens on a multiplicative basis. And sFIN will be utilized for governance proposals 
+
+Staking FIN token will provide three kinds of rewards:
+ 
+- rFIN
+- Multiplier Points
+- Platform fees in (what token stables, eth?)
+
+**Governance**: Users will be able to determine which pools on the platform are rewarded with more FIN tokens. 
+
+**Fee Distribution:** Users who stake their FIN tokens for sFIN will get a share of platform fees. 
+
+**Emissions:** Users can be rewarded with rFIN and multiplier points for even more rewards and a share of the protocol revenue. 
+
+### rFIN
+
+rFIN is a reward token for `sFIN` stakers. They can stake `rFIN` for further token emissions and platform fees, or these tokens can be vested over 12 months to receive `FIN` tokens.
+
+Escrowed FIN (rFIN) can be used in two ways:
+
+- Staked for further rewards for more FIN tokens
+- Vest the rFIN tokens over 12 months and receive the FIN tokens in return
+
+Each rFIN will earn the same amount of rewards as the FIN token. 
+
+## oFIN
+oFIN is an ERC-20 token rewarded for providing liquidity to the protocol. When a user redeems this token they will be able to acquire FIN token at a discounted price to market (% discount subject to change via DAO governance).
+
+oFIN + WETH is directly convertible to FIN with no expiry date.
+
+### How to get oFIN
+
+Poolshark rewards liquidity providers with oFIN as an incentive. Through only providing liquidity on the Poolshark protocol.
+
+sFIN is the receipt token Users are granted once they stake their FIN token in the protocol. This token will represent their share of the total amount of FIN pooled in the staking pool within the protocol. This system will provide benefits and rewards to long term users of the protocol. 
+
+When you stake FIN you get three rewards:
+
+- Escrowed FIN (rFIN)
+- Trading Fees
+- Multiplier Points
+
+## Multiplier Points
+
+When you stake FIN, users get multiplier points at a fixed rate of 100% APR, and rewards max out after 1 year of staking. For example, if you were to stake 100 FIN tokens you would earn 100 multiplier points. 
+
+These multiplier points can be staked for fee rewards at the same rate, but at an increased rate of receiving rFIN. 
+
+When FIN or rFIN tokens are unstaked, an exact proportion of multiplier points are burnt. For example, if you have 100 FIN staked and 50 multiplier points earned. Then, you decided to unstake 50 FIN this would burn 25 multiplier points ( (50/100) * 50). 
+
+The “Boost Percentage” is calculated based on the ratio of Multiplier Points to your total amount of staked FIN:
+
+Boost Percentage = 100 * (Staked Multiplier Points) / (Staked FIN + Staked rFIN).
+
+## Vesting
+
+rFIN tokens can be converted to FIN tokens through vesting.

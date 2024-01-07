@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import ComputerDesktopIcon from "@heroicons/react/24/outline/ComputerDesktopIcon";
+// import ComputerDesktopIcon from "@heroicons/react/24/outline/ComputerDesktopIcon";
 import CubeIcon from "@heroicons/react/24/outline/CubeIcon";
 import DocumentTextIcon from "@heroicons/react/24/outline/DocumentTextIcon";
 import LightBulbIcon from "@heroicons/react/24/outline/LightBulbIcon";
