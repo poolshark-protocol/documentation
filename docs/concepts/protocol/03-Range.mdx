@@ -1,58 +1,59 @@
-
 ---
 id: "Range"
 sidebar_position: 1
 title: "Range"
 ---
 
-Range Pools are similar to what users expect from modern-day AMMs while setting liquidity between a specified price range (UniV3 Concentrated Liquidity). 
+Range is what users expect from modern-day CLAMMs (concentrated liquidity automated market makers). 
 
-Liquidity providers can provide their liquidity to a specific range, resulting in a higher concentration of liquidity and less slippage for swappers compared to AMM without price bounds (UniV2 Infinite Price Bound Range) due to the liquidity setting to a specific price range rather than providing the Full Range of a constant product curve. 
+Liquidity providers can provide their liquidity to a specific range, resulting in a higher concentration of liquidity and less slippage for swappers compared to full-range AMMs such as Uniswap v2 and Curve. 
 
-The opportunity cost of providing liquidity to a constant function curve is known as impermanent loss. Cover Pools are designed to be used to hedge against impermanent loss.
-Range Pools have one unique feature that improves the composability with other DeFi protocols: Default Ranges
+The opportunity cost of providing liquidity to a constant function curve is known as impermanent loss. Cover Pools are designed to hedge against impermanent loss.
 
-graphic 1
+Range Pools contain many small constant function curves between each price point, commonly called a Tick. 
 
-Range Pools contain many small content function curves between each price point, commonly called a Tick. 
+Each smaller price range will have reserves based on liquidity active within that tick.
 
-Each smaller price range will have reserves based on liquidity active within that tick. 
 Within each tick, the pool functions the same as what users have come to know from Constant Function Market Makers.
 
 Mechanism to understand:
 ```
-Choosing a Range Bound
- Claiming Position Liquidity
-Claiming Fees Accrued
+- Choosing a Range Bound
+- Claiming Position Liquidity
+- Claiming Fees Accrued
 ```
-Choosing a Range Bound
+### Choosing a Range Bound
 
 A position can also be bound to a Full Range, which means that the position is bound from the price 0 to ∞ , so the price will always be within range for collecting fees. 
 The variables that change the width of the liquid range are the depth of the liquidity and the effects of impermanent loss. 
 
-Volatile Pairs
+#### Volatile Pairs
 The volatile category applies to most pairs where a project paris ETH or a stablecoin against their native token. 
 
 Provided the liquidity is range-bound, the magnitude of impermanent loss will be greater. For a range-bound position on a low volume pair, it is unlikely that gains from trading fees will exceed the loss from impermanent loss. 
 
 To cover the costs of rebalancing a user's liquidity positions. A Cover Position helps minimize or negate the impermanent loss with directional liquidity profits.  
 
-Pegged Pairs
+#### Pegged Pairs
 Pegged pairs, although not entirely free from the risk of impermanent loss, often have minimal impermanent loss. For lower volume pairs, liquidity providers may want to increase the range bound on each side equally. 
 
-Anchored Pairs
+#### Anchored Pairs
 Anchored in this context defines a pair of assets that move predictably and steadily in price relative to one another.
 
 WETH and rETH (from Rock Pool), is an excellent example in this instance. Suppose rETH returns 10% annually relative to WETH. In that case, the protocol can create an incentivized liquidity mining program on a narrow, concentrated range of liquidity and add a 10% upside as a buffer. This liquidity position would likely remain within range for the year, maintaining high capital efficiency — without any rebalancing. 
 
-Claim Position Liquidity 
-Depending on the current price of the pool, users will be able to withdraw their position accordingly: 
+### Claiming Position Liquidity
 
+Depending on the current price of the pool, users will be able to withdraw their position accordingly:
+
+```
 price < user's lower tick: 100% of user liquidity will be in token0
 price > user's upper tick: 100% of user liquidity will be in token1
 price > user's lower tick AND price < user's upper tick: a mix of the user's liquidity will be both in token0 and token1
-Claiming Fees Accrued 
-How Range Pools track how much the users' positions have been filled is by using the value `feeGrowthGLobal`. Depending on where the current tick is it will determine what liquidity is withdrawn from the pool. 
+```
+
+###Claiming Fees Accrued 
+Range Pools track how much the users' positions have been filled is by using the value `feeGrowthGlobal`. Depending on where the current tick is it will determine what liquidity is withdrawn from the pool. 
 
 Fee accounting is tracked with `feeGrowthGlobal0` and `feeGrowthGlobal1` values present on the upper and lower ick representing the users' position. Global fees generated represent 1 unit of liquidity, so to get the fees belonging to a single position, the protocol will multiply that position's liquidity amount. 
 

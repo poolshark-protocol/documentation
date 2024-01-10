@@ -4,20 +4,16 @@ sidebar_position: 1
 title: "Cover"
 ---
 
-Cover Pools
+## Cover Pools
 
 Cover Pools allows users to create a position to increase exposure to a specific token on a conditional price for a token pair. 
 If the ETH price increases, the pool sells DAI and increases the ETH exposure
 If the ETH price decreases, the pool sells ETH and increases the DAI exposure
 
-graphic 
-
 In contrast, if the position had been in a bidirectional AMM, it would increase the exposure of the token dropping in price in comparison to the opposing token 
 
 If the market wants ETH, the pool takes DAI and raises the ETH to DAI price
 If the market wants DAI, the pool takes ETH and decreases the ETH to DAI price.
-
-graphic 2
 
 This creates a hedging tool for the user if they want to enter or exit an ERC-20 token over some range. 
 
@@ -34,17 +30,11 @@ How Auctions Work
 
 When users deposit their liquidity to compete with the current market rate, the pool must have a dynamic pricing mechanism to fill the position as soon as possible while keeping any discount at a minimum. Cover Pools leverage Gradual Dutch Auctions to raise or lower the pool price (dependent on the buying or selling of a token) to satisfy market demand for an asset within a trading pair at that point in time. 
 
-From Paradigm's Gradual Dutch Auction article:
-```
-Here, the price for every auction decays exponentially according to some `decay constant`.
-The starting price of each auction increases by some fixed `scale factor`.
-And the starting price of the first auction is given by some `initial price`.
-```
+Poolshark releases batches of liquidity based on the TWAP.
 
-/ GDA Poolshark batches released based on TWAP 
 Combining these values (decay constant, scale factor, and initial price) facilitates an exponentially changing market price for each tick of liquidity the protocol auctions off. The price will always deviate by one price tick (e.g., 0.1% for the ETH-USDC 0.05% tier). 
 
-How Volatility Tiers Work
+### How Volatility Tiers Work
 
 Volatility tiers set a few parameters when a pool is initialized: the auction length, syncing fee, minimum position size, and minimum position width.
 

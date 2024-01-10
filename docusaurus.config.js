@@ -141,7 +141,7 @@ const config = {
               },
               {
                 label: "Branding",
-                href: "https://www.figma.com/file/m5ztM0gd1psACKNrMB6ck1/PoolShark?type=design&node-id=22-818&mode=design",
+                href: "https://drive.google.com/drive/folders/1w0VnXS6kFtaUbP9m9BAwMfcQZ1CNMxGk?usp=sharing",
               },
             ],
           },
