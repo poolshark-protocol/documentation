@@ -6,9 +6,11 @@ title: "Range"
 
 Range is what users expect from modern-day CLAMMs (concentrated liquidity automated market makers). 
 
-Liquidity providers can provide their liquidity to a specific range, resulting in a higher concentration of liquidity and less slippage for swappers compared to full-range AMMs such as Uniswap v2 and Curve. 
+Liquidity providers select a price range for their liquidity to trade over, resulting in increased capital efficiency and reduced slippage for swappers versus full-range AMMs such as Uniswap v2. 
 
-The opportunity cost of providing liquidity to a constant function curve is known as impermanent loss. Cover Pools are designed to hedge against impermanent loss.
+The opportunity cost of providing liquidity to a constant function curve is known as IL (impermanent loss) or LVR (loss versus rebalancing).
+
+Cover Pools are designed to hedge against impermanent loss.
 
 Range Pools contain many small constant function curves between each price point, commonly called a Tick. 
 

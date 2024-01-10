@@ -39,26 +39,22 @@ const config = {
       // V1 redirects
       {
         redirects: [
-          {
-            from: "/protocol/faq/basics",
-            to: "/concepts/what-is-poolshark",
-          },
-          {
-            from: "/protocol/guides/getting-started",
-            to: "/contracts/v1/guides/getting-started",
-          },
-          {
-            from: "/protocol/guides/chains",
-            to: "/contracts/v1/deployments",
-          },
-          {
-            from: "/protocol/introduction",
-            to: "/concepts/what-is-poolshark",
-          },
-          {
-            from: "/protocol/subgraphs/endpoints",
-            to: "/api/subgraphs/overview",
-          },
+          // {
+          //   from: "/protocol/faq/basics",
+          //   to: "/concepts/what-is-poolshark",
+          // },
+          // {
+          //   from: "/protocol/guides/getting-started",
+          //   to: "/contracts/v1/guides/getting-started",
+          // },
+          // {
+          //   from: "/protocol/guides/chains",
+          //   to: "/contracts/v1/deployments",
+          // },
+          // {
+          //   from: "/protocol/introduction",
+          //   to: "/concepts/what-is-poolshark",
+          // },
         ],
       },
     ],
