@@ -39,10 +39,10 @@ const config = {
       // V1 redirects
       {
         redirects: [
-          // {
-          //   from: "/protocol/faq/basics",
-          //   to: "/concepts/what-is-poolshark",
-          // },
+          {
+            from: "/overview",
+            to: "/concepts/what-is-poolshark",
+          },
           // {
           //   from: "/protocol/guides/getting-started",
           //   to: "/contracts/v1/guides/getting-started",
