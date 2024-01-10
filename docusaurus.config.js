@@ -35,28 +35,15 @@ const config = {
   ],
   plugins: [
     [
-      "@docusaurus/plugin-client-redirects",
-      // V1 redirects
+      '@docusaurus/plugin-client-redirects',
       {
         redirects: [
           {
             from: "/overview",
             to: "/concepts/what-is-poolshark",
           },
-          // {
-          //   from: "/protocol/guides/getting-started",
-          //   to: "/contracts/v1/guides/getting-started",
-          // },
-          // {
-          //   from: "/protocol/guides/chains",
-          //   to: "/contracts/v1/deployments",
-          // },
-          // {
-          //   from: "/protocol/introduction",
-          //   to: "/concepts/what-is-poolshark",
-          // },
-        ],
-      },
+        ]
+      }
     ],
   ],
   scripts: [
@@ -193,16 +180,6 @@ const config = {
             position: "left",
             to: "/token/tokenomics",
           },
-          // {
-          //   label: "Apps",
-          //   position: "left",
-          //   to: "/apps/overview",
-          // },
-          // {
-          //   label: "APIs",
-          //   position: "left",
-          //   to: "/api/subgraphs/overview",
-          // },
           {
             label: "Discord",
             position: "right",
