@@ -79,6 +79,8 @@ Quoting multiple LimitPools can be done via the `PoolsharkRouter` contract (see 
 ```
 
 If `sortResults` is true, the first item in `results` will have the best quote.
+- If `exactIn` is true, the first result will contain the highest `tokenOut` amount as output
+- If `exactIn` is false, the first result will contain the lowest `tokenIn` amount as input
 
 If `sortResults` is false, the ordering of `results` will match the `pools` array passed in.
 
