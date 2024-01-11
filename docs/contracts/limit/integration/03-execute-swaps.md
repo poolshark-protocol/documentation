@@ -56,7 +56,8 @@ The `SwapParams` struct has the following fields:
 
         /**
          * @custom:field exactIn
-         * @notice True if `amount` is in tokenIn; False if `amount` is in tokenOut
+         * @notice True if `amount` is in tokenIn
+         * @notice False if `amount` is in tokenOut
          */
         bool exactIn;
 
@@ -69,7 +70,7 @@ The `SwapParams` struct has the following fields:
 
         /**
          * @custom:field callbackData
-         * @notice callback data which gets passed back to msg.sender at the end of a `mint` call
+         * @notice arbitrary bytes returned to msg.sender at the end of a `swap` call
          */
         bytes callbackData;
     }
@@ -79,7 +80,21 @@ If nothing special is required, callbackData can be passed an a bytes32 value of
 
 Here is how this can be done using `ethers.js`:
 ```
-ethers.utils.formatBytes32String('')
+    let txn = await hre.props.poolRouter
+    .connect(signer)
+    .multiSwapSplit(
+    ['0xa43ddbcc4b78512c316bd7091b4c60f06db0fe42'],
+        [
+        {
+            to: '0xBd5db4c7D55C086107f4e9D17c4c34395D1B1E1E',
+            priceLimit: BigNumber.from('2172618421097231267834892073346),
+            amount: ethers.utils.parseUnits('1', 18),
+            zeroForOne: true,
+            exactIn: true,
+            callbackData: ethers.utils.formatBytes32String('')
+        },
+        ])
+    await txn.wait()
 ```
 
 ## Multiple Pool Split Swap
