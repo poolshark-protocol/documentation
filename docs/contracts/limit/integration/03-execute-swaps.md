@@ -4,9 +4,7 @@ sidebar_position: 3
 title: "Execute Swaps"
 ---
 
-## Split Swap
-
-A "split swap" will split an input amount across multiple pools, carrying any leftover `tokenIn` amount until the `pools` list is exhausted.
+## Single Pool Swap
 
 Executing a swap should be done through the `PoolsharkRouter` contract (see [deployments](/contracts/limit/deployments)).
 
@@ -83,5 +81,11 @@ Here is how this can be done using `ethers.js`:
 ```
 ethers.utils.formatBytes32String('')
 ```
+
+## Multiple Pool Split Swap
+
+A "split swap" will split an input amount across multiple pools, carrying any leftover `tokenIn` amount until the `pools` list is exhausted.
+
+The remaining directions follow the same as the [Single Pool Swap](/contracts/limit/integration/swaps#single-pool-swap) section above.
 
 
