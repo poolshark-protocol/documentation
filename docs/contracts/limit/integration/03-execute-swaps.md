@@ -70,7 +70,7 @@ The `SwapParams` struct has the following fields:
 
         /**
          * @custom:field callbackData
-         * @notice arbitrary bytes returned to msg.sender at the end of a `swap` call
+         * @notice arbitrary bytes passed to msg.sender after `swap` call
          */
         bytes callbackData;
     }
@@ -83,17 +83,18 @@ Here is how this can be done using `ethers.js`:
     let txn = await hre.props.poolRouter
     .connect(signer)
     .multiSwapSplit(
-    ['0xa43ddbcc4b78512c316bd7091b4c60f06db0fe42'],
+        ['0xa43ddbcc4b78512c316bd7091b4c60f06db0fe42'],
         [
-        {
-            to: '0xBd5db4c7D55C086107f4e9D17c4c34395D1B1E1E',
-            priceLimit: BigNumber.from('2172618421097231267834892073346),
-            amount: ethers.utils.parseUnits('1', 18),
-            zeroForOne: true,
-            exactIn: true,
-            callbackData: ethers.utils.formatBytes32String('')
-        },
-        ])
+            {
+                to: '0xBd5db4c7D55C086107f4e9D17c4c34395D1B1E1E',
+                priceLimit: BigNumber.from('2172618421097231267834892073346),
+                amount: ethers.utils.parseUnits('1', 18),
+                zeroForOne: true,
+                exactIn: true,
+                callbackData: ethers.utils.formatBytes32String('')
+            },
+        ]
+    )
     await txn.wait()
 ```
 
