@@ -8,8 +8,8 @@ title: "Tick Data"
 
 ```solidity
   /**
-  * @param pool - The contract address of the pool
-  * @param tickBitmapIndex - the word index in the tick bitmap to fetch tick data for
+  * @param pool - Contract address of the pool
+  * @param tickBitmapIndex - Index in the tick bitmap for the 256-bit word
   * @return populatedTicks - TickData array sorted from highest tick first
   */
   function getTickDataInWord(
