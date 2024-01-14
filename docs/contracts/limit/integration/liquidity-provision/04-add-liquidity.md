@@ -8,7 +8,7 @@ title: "Add Liquidity"
 
 Range liquidity can be added via the `mintRange` function:
 
-```
+```solidity
     function mintRange(
         MintRangeParams memory params
     )
@@ -21,7 +21,7 @@ Range liquidity can be added via the `mintRange` function:
 
 The `MintRangeParams` struct has the following fields:
 
-```
+```solidity
     /**
      * @custom:struct MintRangeParams
      */

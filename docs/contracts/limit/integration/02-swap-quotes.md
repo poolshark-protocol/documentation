@@ -8,7 +8,7 @@ title: "Fetch Quotes"
 
 Quoting a LimitPool can be done via the following function:
 
-```
+```solidity
     /**
     * @param params The QuoteParms struct to be passed in
     * @return inAmount - the amount of tokenIn sent as input
@@ -27,7 +27,7 @@ Quoting a LimitPool can be done via the following function:
 
 The `QuoteParams` struct has the following fields:
 
-```
+```solidity
     struct QuoteParams {
         /**
          * @custom:field priceLimit
@@ -64,7 +64,7 @@ The `QuoteParams` struct has the following fields:
 
 Quoting multiple LimitPools can be done via the `PoolsharkRouter` contract (see [deployments](/contracts/limit/deployments)).
 
-```
+```solidity
     /**
     * @param params The QuoteParms struct to be passed in
     * @return inAmount - the amount of tokenIn sent as input
@@ -86,7 +86,7 @@ If `sortResults` is false, the ordering of `results` will match the `pools` arra
 
 The `QuoteParams` struct has the following fields:
 
-```
+```solidity
     struct QuoteParams {
         /**
          * @custom:field priceLimit
@@ -120,7 +120,7 @@ The `QuoteParams` struct has the following fields:
 ```
 
 The `QuoteResults` struct has the following fields:
-```
+```solidity
     struct QuoteResults {
         /**
          * @custom:field pool

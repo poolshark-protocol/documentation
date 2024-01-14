@@ -44,7 +44,7 @@ The `LimitPoolCreated()` event allows third parties to track all pools currently
 
 This event is emitted from the `LimitPoolFactory` contract each time a new pool is created.
 
-```
+```solidity
     event LimitPoolCreated(
         /**
          * @custom:field pool

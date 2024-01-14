@@ -8,7 +8,7 @@ title: "Remove Liquidity"
 
 Range liquidity can be removed via the `burnRange` function:
 
-```
+```solidity
     function burnRange(
         BurnRangeParams memory params
     )
@@ -21,7 +21,7 @@ Range liquidity can be removed via the `burnRange` function:
 
 The `BurnRangeParams` struct has the following fields:
 
-```
+```solidity
     struct BurnRangeParams {
         /**
          * @custom:field to

@@ -7,25 +7,50 @@ title: "Tick Data"
 ### getTickDataInWord
 
 ```solidity
+  /**
+  * @param pool - The contract address of the pool
+  * @param tickBitmapIndex - the word index in the tick bitmap to fetch tick data for
+  * @return populatedTicks - TickData array sorted from highest tick first
+  */
   function getTickDataInWord(
     address pool,
     int16 tickBitmapIndex
-  ) public returns (Tick[] memory ticks)
+  ) public returns (TickData[] memory populatedTicks)
 ```
 
 Get all the data for pool ticks at a specified word index.
 
 Each word is 256 bits and contains up to 256 ticks.
 
-#### Parameters:
+One word will cover a % price move equal to:
+```
+((1 + (tickSpacing / 20000)) ^ 256) * 100 - 100
+```
 
-| Name              | Type    | Description                                                                                              |
-| :---------------- | :------ | :------------------------------------------------------------------------------------------------------- |
-| `pool`            | address | The address of the pool for which to fetch populated tick data                                           |
-| `tickBitmapIndex` | int16   | The index of the word in the tick bitmap for which to parse the bitmap and fetch all the populated ticks |
+For a tick spacing of 10 this will be ~13.65%.
 
-#### Return Values:
+The `TickData` struct has the following fields:
 
-| Name             | Type                      | Description                                                 |
-| :--------------- | :------------------------ | :---------------------------------------------------------- |
-| `populatedTicks` | Tick[] | An array of tick data for the given 256-bit word in the tick bitmap |
+```
+    struct TickData {
+        /**
+         * @custom:field tick
+         * @notice The index of the tick
+         */
+        int24 tick;
+
+        /**
+         * @custom:field liquidityDelta
+         * @notice The +/- liquidity change at the tick
+         * @notice Delta applied for upward crosses
+         * @notice Opposite delta applied for downward crosses
+         */
+        int128 liquidityDelta;
+
+        /**
+         * @custom:field liquidityAbsolute
+         * @notice The absolute value of liquidity at the tick
+         */
+        uint128 liquidityAbsolute;
+    }
+```

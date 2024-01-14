@@ -16,7 +16,7 @@ The amount will be the `tokenIn` amount desired to be swapped.
 
 Then the `multiSwapSplit` function can be called:
 
-```
+```solidity
     /**
     * @param pools The pool addresses to be swapped against
     * @param params The SwapParams struct array to be passed in
@@ -31,7 +31,7 @@ Then the `multiSwapSplit` function can be called:
 
 The `SwapParams` struct has the following fields:
 
-```
+```solidity
     struct SwapParams {
         /**
          * @custom:field to
