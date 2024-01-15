@@ -20,15 +20,6 @@ title: "Tick Data"
 
 Get all the data for pool ticks at a specified word index.
 
-Each word is 256 bits and contains up to 256 ticks.
-
-One word will cover a % price move equal to:
-```
-((1 + (tickSpacing / 20000)) ^ 256) * 100 - 100
-```
-
-For a tick spacing of 10 this will be ~13.65%.
-
 The `TickData` struct has the following fields:
 
 ```
@@ -54,3 +45,15 @@ The `TickData` struct has the following fields:
         uint128 liquidityAbsolute;
     }
 ```
+
+### Word Details
+
+Each word is 256 bits and contains up to 256 ticks.
+
+One word will cover a % price move equal to:
+```
+((1 + (tickSpacing / 20000)) ^ 256) * 100 - 100
+```
+
+For a tick spacing of 10 this will be ~13.65%.
+
