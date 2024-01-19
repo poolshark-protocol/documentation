@@ -9,11 +9,10 @@ design and testing of the protocol to guarantee its safety and reliability.
 
 ## Audits
 
-The codebase has undergone rigorous audits by leading security experts from [Guardian Audits](https://github.com/GuardianAudits/Audits/blob/main/Poolshark/Poolshark_Limit_Audit.pdf) as well as
+The codebase has undergone rigorous audits by leading security experts from [Guardian Audits][guardian-audits] as well as
 independent auditors.
 
-For a comprehensive list of all audits conducted, please click
-[here](https://github.com/poolshark-protocol/limit/tree/master/audits).
+Guardian Audits also helped build out an [Echidna framework for Limit][fuzz-testing] which helped identify findings during the audit period.
 
 ## Bug Bounty
 
