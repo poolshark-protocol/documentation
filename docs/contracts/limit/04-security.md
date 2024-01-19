@@ -24,9 +24,9 @@ Poolshark Labs is offering a bounty of up to $100,000 for
 reporting critical vulnerabilities.
 
 ## Complete Process
-- [*Audit Reports*][audits]
-    * Guardian Audits
-    * Verilog
+- *Audit Reports*
+    * [Guardian Audits][guardian-audits]
+    * [Verilog Solutions][verilog-solutions]
 
 - *Public Bug Bounty*
     * Immunefi $100k USD Payout
@@ -45,6 +45,7 @@ reporting critical vulnerabilities.
     * Liquidity oracle underflow
     * Fee growth underflow
 
-[audits]: https://github.com/poolshark-protocol/limit/tree/master/audits
+[guardian-audits]: https://github.com/GuardianAudits/Audits/blob/main/Poolshark/Poolshark_Limit_Audit.pdf
+[verilog-solutions]: https://www.verilog.solutions/audits/poolshark/
 [unit-testing]: https://github.com/poolshark-protocol/limit/tree/arb-mainnet/test/contracts
 [fuzz-testing]: https://github.com/poolshark-protocol/limit/blob/echidna/contracts/LimitEchidnaPool.sol
