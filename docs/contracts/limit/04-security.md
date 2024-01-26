@@ -19,7 +19,7 @@ Guardian Audits also helped build out an [Echidna framework for Limit][fuzz-test
 The Poolshark Protocol is subject to a bug bounty program per the terms outlined
 [here](https://github.com/poolshark-protocol/limit/SECURITY.md).
 
-Poolshark Labs is offering a bounty of up to $100,000 for
+Poolshark Labs is offering bounties of up to $100,000 in total for
 reporting critical vulnerabilities.
 
 ## Complete Process
