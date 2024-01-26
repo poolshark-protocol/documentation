@@ -27,8 +27,9 @@ reporting critical vulnerabilities.
     * [Guardian Audits][guardian-audits]
     * [Verilog Solutions][verilog-solutions]
 
-- *Public Bug Bounty*
-    * Immunefi $100k USD Payout
+- *Public Bug Bounties*
+    * [*Immunefi Bounty*][immunefi]
+        * $100k USD budget
 - *Testnet Beta*
     * Arbitrum Goerli
     * Scroll Sepolia
@@ -44,6 +45,7 @@ reporting critical vulnerabilities.
     * Liquidity oracle underflow
     * Fee growth underflow
 
+[immunefi]: https://immunefi.com/bounty/poolshark/
 [guardian-audits]: https://github.com/GuardianAudits/Audits/blob/main/Poolshark/Poolshark_Limit_Audit.pdf
 [verilog-solutions]: https://www.verilog.solutions/audits/poolshark/
 [unit-testing]: https://github.com/poolshark-protocol/limit/tree/arb-mainnet/test/contracts
