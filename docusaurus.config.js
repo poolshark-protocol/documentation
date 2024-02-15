@@ -188,7 +188,7 @@ const config = {
           {
             label: "GitHub",
             position: "right",
-            to: "https://github.com/sablier-labs",
+            to: "https://github.com/poolshark-protocol",
           },
           {
             label: "Links",
