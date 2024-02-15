@@ -183,7 +183,7 @@ const config = {
           {
             label: "Discord",
             position: "right",
-            to: "http://discord.poolshark.fi",
+            to: "https://discord.gg/poolshark-896196350310514739",
           },
           {
             label: "GitHub",
